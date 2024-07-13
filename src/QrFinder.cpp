@@ -5,35 +5,22 @@
 namespace imggrab {
 
 
-    QrFinder::QrFinder(const std::set<std::string>& qrSet) {
-        mQrSet = qrSet;
-        mRun = false;
+    QrFinder::QrFinder(const std::set<std::string>& qrSet,ImageQueue& inQueue, ImageQueue& outQueue):mQrSet(qrSet),inQ(inQueue),outQ(outQueue) {
     }
 
-    bool QrFinder::run(ImageQueue& processingQueue, ImageQueue& outQueue){
-        std::unique_lock<std::mutex> lock(mLock);
-        if (mRun) {
-            return false;
-        }
-        mThread = std::thread(&QrFinder::threadFunc, this, std::ref(processingQueue), std::ref(outQueue));
-        //std::thread t = std::thread(&QrFinder::threadFunc, this, processingQueue, outQueue);
-        mRun = true;
-        return true;
-    }
-
-    void QrFinder::threadFunc(ImageQueue& processingQueue, ImageQueue& outQueue){
+    void QrFinder::threadFunc(){
         zbar::ImageScanner scanner;
         // Configure scanner
         scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
 
         // Convert image to grayscale
-        while(1) {
+        while(mRun) {
 
-            if (processingQueue.size() < 1){
-                processingQueue.wait();
+            if (inQ.size() < 1){
+                inQ.wait();
             }
             try {
-                auto tsFrame = processingQueue.pop();
+                auto tsFrame = inQ.pop();
                 cv::Mat imGray;
                 cv::cvtColor(tsFrame.second, imGray,cv::COLOR_BGR2GRAY);
 
@@ -48,7 +35,7 @@ namespace imggrab {
                 {
                     if(mQrSet.find(symbol->get_data()) != mQrSet.end())
                     {
-                        outQueue.push(tsFrame);
+                        outQ.push(tsFrame);
                     }
 
                 }
@@ -62,12 +49,6 @@ namespace imggrab {
             mRun = false;
         }
 
-    }
-
-    void QrFinder::join() {
-        if(mRun){
-            mThread.join();
-        }
     }
 
 

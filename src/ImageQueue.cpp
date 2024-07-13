@@ -30,9 +30,9 @@ namespace imggrab {
         }
         else {
             mTsMatQ.push(entry);
+            mCondVar.notify_all();
             return true;
         }
-        mCondVar.notify_all();
     }
 
 
@@ -47,7 +47,6 @@ namespace imggrab {
     void ImageQueue::wait(){
         std::unique_lock<std::mutex> lock(mQMutex);
         mCondVar.wait(lock);
-        mCondVar.notify_all();
     }
 
 

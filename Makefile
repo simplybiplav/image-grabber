@@ -1,5 +1,5 @@
 BUILD_DIR := build
-INC_FLAGS += -I=/usr/include/opencv4
+INC_FLAGS += -I/usr/include/opencv4
 CPP_SRCS := $(shell find . -name "*.cpp")
 OBJS = $(patsubst ./src/%.cpp,$(BUILD_DIR)/%.cpp.o,$(CPP_SRCS))
 CPP_BIN := image_grabber

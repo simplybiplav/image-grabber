@@ -1,24 +1,20 @@
 #pragma once
 #include <thread>
 #include "ImageQueue.hpp"
+#include "Threadbase.hpp"
 
 namespace imggrab {
 
 
-class QrFinder {
+class QrFinder: public Threadbase {
 
     private:
-        std::mutex mLock;
         std::set<std::string> mQrSet;
-        std::thread mThread;
-        bool mRun;
-        void threadFunc(ImageQueue& processingQueue, ImageQueue& outQueue);
+        ImageQueue& inQ;
+        ImageQueue& outQ;
+        void threadFunc();
     public:
-       QrFinder(const std::set<std::string>& qrSet);
-
-       bool run(ImageQueue& processingQueue, ImageQueue& outQueue);
-
-       void join();
+       QrFinder(const std::set<std::string>& qrSet,ImageQueue& inQueue, ImageQueue& outQueue);
 };
 
 
