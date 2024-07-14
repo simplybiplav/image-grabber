@@ -1,4 +1,5 @@
 #include "ImageQueue.hpp"
+#include <exception>
 
 namespace imggrab {
 
@@ -14,12 +15,12 @@ namespace imggrab {
     TimeMatPair ImageQueue::pop(){
         std::unique_lock<std::mutex> lock(mQMutex);
         if ( mTsMatQ.size() > 0 ) {
-            TimeMatPair& val = mTsMatQ.front();
+            TimeMatPair val = mTsMatQ.front();
             mTsMatQ.pop();
             return val;
         }
         else {
-            throw "No item in Queue";
+            throw std::underflow_error("No item in Queue");
         }
     }
 

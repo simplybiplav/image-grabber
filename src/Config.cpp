@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <exception>
 
 namespace imggrab {
 
@@ -41,38 +42,38 @@ namespace imggrab {
             std::vector<std::string>::iterator it;
             for(it= args.begin(); it != args.end(); ++it){
                 if (it->compare("--help")==0 || it->compare("-h") == 0){
-                    throw "Invalid Argument";
+                    throw std::invalid_argument("Invalid Argument");
                 }else if(it->compare("--cam")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mCamIdx = std::stoi((*it).c_str());
 
                 }else if(it->compare("--fps")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mFps = std::stoi((*it).c_str());
 
                 }else if(it->compare("--width")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mWidth = std::stoi((*it).c_str());
 
                 }else if(it->compare("--height")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mHeight = std::stoi((*it).c_str());
 
                 }else if(it->compare("--dir")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mDirectory = *it;
 
                 }else if(it->compare("--qr")==0){
-                    if(++it == args.end()) throw "Invalid Argument";
+                    if(++it == args.end()) throw std::invalid_argument("Invalid Argument");
                     mQrList.insert(*it);
 
                 }
                 else {
-                    throw "Invalid Argument";
+                    throw std::invalid_argument("Invalid Argument");
                 }
 
             }
-            if(!valid()) throw "Invalid Argument";
+            if(!valid()) throw std::invalid_argument("Invalid Argument");
         }
         catch(...){
             help();
