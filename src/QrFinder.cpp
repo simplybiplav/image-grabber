@@ -44,10 +44,6 @@ namespace imggrab {
                 std::cerr << "Caught exception processing frame for QR" <<std::endl;
             }
         }
-        {
-            std::unique_lock<std::mutex> lock(mLock);
-            mRun = false;
-        }
 
     }
 
