@@ -1,17 +1,26 @@
 #pragma once
 #include <mutex>
 #include <thread>
+#include <atomic>
+
+/*! \class Threadbase Threadbase.hpp
+ *   \brief abstract class for running a thread
+ *
+ */
 class Threadbase{
 
     protected:
-        std::mutex mLock;
-        bool mRun;
-        std::thread mThread;
+        std::atomic<bool> mRun; //!< execute value
+        std::thread mThread; //!< store thread object
+
+        /// @brief virtual function which derived class has to define to run a thread
         virtual void threadFunc() = 0;
     public:
+        /// @brief spwan a thread
+        /// @return bool if success
         bool run(){
             try {
-                std::unique_lock<std::mutex> lock(mLock);
+                if (mRun) throw "Already Running";
                 mThread = std::thread(&Threadbase::threadFunc, this);
                 mRun = true;
                 return true;
@@ -22,7 +31,6 @@ class Threadbase{
             }
         }
         void stop(){
-            std::unique_lock<std::mutex> lock(mLock);
             mRun = false;
         }
         void join(){

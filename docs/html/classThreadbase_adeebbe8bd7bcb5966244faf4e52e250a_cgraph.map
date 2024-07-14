@@ -1,0 +1,4 @@
+<map id="Threadbase::run" name="Threadbase::run">
+<area shape="rect" id="node1" title="spwan a thread" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classThreadbase.html#a01ecf625b3908e1358df4387158e2c68" title="virtual function which derived class has to define to run a thread" alt="" coords="180,5,359,32"/>
+</map>

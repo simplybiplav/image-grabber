@@ -1,0 +1,5 @@
+<map id="imggrab::ImageQueue::wait" name="imggrab::ImageQueue::wait">
+<area shape="rect" id="node1" title="blocking wait for queue" alt="" coords="229,39,396,80"/>
+<area shape="rect" id="node2" href="$classimggrab_1_1ImageHandler.html#a5b39c4c7669e323ce5dfd8ad533acde7" title="arguments passed" alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node3" href="$classimggrab_1_1QrFinder.html#a5e25bacba0b02c57cf5c009f673c0ad3" title="processed incoming queue and finds image frame which has any qr value" alt="" coords="20,71,167,112"/>
+</map>

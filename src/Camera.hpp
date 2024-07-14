@@ -6,45 +6,34 @@
 /*! \class Camera Camera.hpp
  *   \brief for video source
  *
+ *  Intiate camera and put frames in queue
  */
 
 namespace imggrab {
 
-class Camera:public Threadbase {
+    class Camera:public Threadbase {
 
-    private:
-        int mFps; //!< Fps Of camera
-        int mFrameWidth; //!< Image Frame Width
-        int mFrameHeight; //!< Image Frame Height
-        int mBrightness; //!< camera's Brightness
-        int mCamId; //!< camera Source Id
-        std::thread mThread; //!< thread object
-        ImageQueue& mImageQ;
-        void threadFunc();
-    public:
-        /*! A constructor
-            \param[in] video source index
-            \param[in] imageQ queue for image
-        */
-        Camera(int camId,ImageQueue& imageQ);
+        private:
+            int mFps; //!< Fps Of camera
+            int mFrameWidth; //!< Image Frame Width
+            int mFrameHeight; //!< Image Frame Height
+            int mCamId; //!< camera Source Id
+            std::thread mThread; //!< thread object
+            ImageQueue& mImageQ; //!< queue to put frames
 
+            /// @brief function to capture frame and put into queue
+            void threadFunc();
+        public:
 
-        /*! Sets parameters for camera and frame
+            /// @brief constructor
+            /// @param[in] camId camera index
+            /// @param[in] fps fps of camera
+            /// @param[in] width frame width
+            /// @param[in] height camera height
+            /// @param[in] imageQ image Queue
+            Camera(int camId,int fps, int width, int height, ImageQueue& imageQ); //!< constructor
 
-            \param[in] fps The fps of camera     
-            \param[in] width The width of the image frame
-            \param[in] height The Height of the image frame
-            \param[in] brightness The brightness of the camera
-            \return void returns nothingd
-
-        */
-        void setParams(int fps, int width, int height, int brightness);
-
-};
-
-
-
-
+    };
 
 
 

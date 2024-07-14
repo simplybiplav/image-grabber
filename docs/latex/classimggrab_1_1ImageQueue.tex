@@ -1,0 +1,199 @@
+\hypertarget{classimggrab_1_1ImageQueue}{}\doxysection{imggrab\+::Image\+Queue Class Reference}
+\label{classimggrab_1_1ImageQueue}\index{imggrab::ImageQueue@{imggrab::ImageQueue}}
+
+
+for parsing argument  
+
+
+
+
+{\ttfamily \#include $<$Image\+Queue.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimggrab_1_1ImageQueue_aae36acbbdbb191f3317d7b7b0fd7b112}{Image\+Queue}} (int q\+Size)
+\item 
+bool \mbox{\hyperlink{classimggrab_1_1ImageQueue_ac1c656cc49d61e96faa728119b412f25}{push}} (\mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} \&entry)
+\begin{DoxyCompactList}\small\item\em push entry to the queue \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} \mbox{\hyperlink{classimggrab_1_1ImageQueue_a77b4a66281b04598b98df9567a7d546e}{pop}} ()
+\begin{DoxyCompactList}\small\item\em push entry to the queue \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimggrab_1_1ImageQueue_acb8c052c7abcb73892f8bfbf7fa170c7}{timed\+Wait}} (std\+::chrono\+::nanoseconds nano\+Sec)
+\begin{DoxyCompactList}\small\item\em timed wait for queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimggrab_1_1ImageQueue_af40e8481107dec59ca024c2d6169504d}{wait}} ()
+\begin{DoxyCompactList}\small\item\em blocking wait for queue \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classimggrab_1_1ImageQueue_a8ae6c1e508f3847dd7be3fbe4a6b0d69}{size}} ()
+\begin{DoxyCompactList}\small\item\em returns size of Queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ \mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} $>$ \mbox{\hyperlink{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}{m\+Ts\+MatQ}}
+\item 
+std\+::mutex \mbox{\hyperlink{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}{m\+Q\+Mutex}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classimggrab_1_1ImageQueue_a19a5642d27a6335307bf9c682bead524}{m\+Cond\+Var}}
+\item 
+int \mbox{\hyperlink{classimggrab_1_1ImageQueue_a018e67afe8865980fe4c363797562d93}{m\+Q\+Max\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+for parsing argument 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_aae36acbbdbb191f3317d7b7b0fd7b112}\label{classimggrab_1_1ImageQueue_aae36acbbdbb191f3317d7b7b0fd7b112}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!ImageQueue@{ImageQueue}}
+\index{ImageQueue@{ImageQueue}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{ImageQueue()}{ImageQueue()}}
+{\footnotesize\ttfamily imggrab\+::\+Image\+Queue\+::\+Image\+Queue (\begin{DoxyParamCaption}\item[{int}]{q\+Size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a77b4a66281b04598b98df9567a7d546e}\label{classimggrab_1_1ImageQueue_a77b4a66281b04598b98df9567a7d546e}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!pop@{pop}}
+\index{pop@{pop}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} imggrab\+::\+Image\+Queue\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+push entry to the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entry} & Time\+Mat\+Pair reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+Ime\+Mat\+Pair value if success else throws exception 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1ImageQueue_a77b4a66281b04598b98df9567a7d546e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_ac1c656cc49d61e96faa728119b412f25}\label{classimggrab_1_1ImageQueue_ac1c656cc49d61e96faa728119b412f25}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!push@{push}}
+\index{push@{push}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool imggrab\+::\+Image\+Queue\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} \&}]{entry }\end{DoxyParamCaption})}
+
+
+
+push entry to the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entry} & Time\+Mat\+Pair reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if success else false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1ImageQueue_ac1c656cc49d61e96faa728119b412f25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a8ae6c1e508f3847dd7be3fbe4a6b0d69}\label{classimggrab_1_1ImageQueue_a8ae6c1e508f3847dd7be3fbe4a6b0d69}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!size@{size}}
+\index{size@{size}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int imggrab\+::\+Image\+Queue\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns size of Queue 
+
+\begin{DoxyReturn}{Returns}
+int size of Queuee 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1ImageQueue_a8ae6c1e508f3847dd7be3fbe4a6b0d69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_acb8c052c7abcb73892f8bfbf7fa170c7}\label{classimggrab_1_1ImageQueue_acb8c052c7abcb73892f8bfbf7fa170c7}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!timedWait@{timedWait}}
+\index{timedWait@{timedWait}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{timedWait()}{timedWait()}}
+{\footnotesize\ttfamily bool imggrab\+::\+Image\+Queue\+::timed\+Wait (\begin{DoxyParamCaption}\item[{std\+::chrono\+::nanoseconds}]{nano\+Sec }\end{DoxyParamCaption})}
+
+
+
+timed wait for queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nano\+Sec} & wait time in nanoseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if an entry is pushed to queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_af40e8481107dec59ca024c2d6169504d}\label{classimggrab_1_1ImageQueue_af40e8481107dec59ca024c2d6169504d}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!wait@{wait}}
+\index{wait@{wait}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void imggrab\+::\+Image\+Queue\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+blocking wait for queue 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1ImageQueue_af40e8481107dec59ca024c2d6169504d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a19a5642d27a6335307bf9c682bead524}\label{classimggrab_1_1ImageQueue_a19a5642d27a6335307bf9c682bead524}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!mCondVar@{mCondVar}}
+\index{mCondVar@{mCondVar}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{mCondVar}{mCondVar}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable imggrab\+::\+Image\+Queue\+::m\+Cond\+Var\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a018e67afe8865980fe4c363797562d93}\label{classimggrab_1_1ImageQueue_a018e67afe8865980fe4c363797562d93}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!mQMaxSize@{mQMaxSize}}
+\index{mQMaxSize@{mQMaxSize}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{mQMaxSize}{mQMaxSize}}
+{\footnotesize\ttfamily int imggrab\+::\+Image\+Queue\+::m\+Q\+Max\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}\label{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!mQMutex@{mQMutex}}
+\index{mQMutex@{mQMutex}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{mQMutex}{mQMutex}}
+{\footnotesize\ttfamily std\+::mutex imggrab\+::\+Image\+Queue\+::m\+Q\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}\label{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}} 
+\index{imggrab::ImageQueue@{imggrab::ImageQueue}!mTsMatQ@{mTsMatQ}}
+\index{mTsMatQ@{mTsMatQ}!imggrab::ImageQueue@{imggrab::ImageQueue}}
+\doxysubsubsection{\texorpdfstring{mTsMatQ}{mTsMatQ}}
+{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}}$>$ imggrab\+::\+Image\+Queue\+::m\+Ts\+MatQ\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ImageQueue_8hpp}{Image\+Queue.\+hpp}}\item 
+src/\mbox{\hyperlink{ImageQueue_8cpp}{Image\+Queue.\+cpp}}\end{DoxyCompactItemize}

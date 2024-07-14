@@ -1,0 +1,148 @@
+\hypertarget{classThreadbase}{}\doxysection{Threadbase Class Reference}
+\label{classThreadbase}\index{Threadbase@{Threadbase}}
+
+
+abstract class for running a thread  
+
+
+
+
+{\ttfamily \#include $<$Threadbase.\+hpp$>$}
+
+
+
+Inheritance diagram for Threadbase\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThreadbase__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classThreadbase_adeebbe8bd7bcb5966244faf4e52e250a}{run}} ()
+\begin{DoxyCompactList}\small\item\em spwan a thread \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThreadbase_ae7fa2a80df809954316a5f14e5a1eba5}{stop}} ()
+\item 
+void \mbox{\hyperlink{classThreadbase_a89c3036d9c15de30bdac92f4b3fb54aa}{join}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classThreadbase_a01ecf625b3908e1358df4387158e2c68}{thread\+Func}} ()=0
+\begin{DoxyCompactList}\small\item\em virtual function which derived class has to define to run a thread \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classThreadbase_a0df26f4a576175bf2759babe23e88690}{m\+Run}}
+\begin{DoxyCompactList}\small\item\em execute value \end{DoxyCompactList}\item 
+std\+::thread \mbox{\hyperlink{classThreadbase_ac9632274a2a705546a1b0e05add442a6}{m\+Thread}}
+\begin{DoxyCompactList}\small\item\em store thread object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+abstract class for running a thread 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classThreadbase_a89c3036d9c15de30bdac92f4b3fb54aa}\label{classThreadbase_a89c3036d9c15de30bdac92f4b3fb54aa}} 
+\index{Threadbase@{Threadbase}!join@{join}}
+\index{join@{join}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void Threadbase\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classThreadbase_a89c3036d9c15de30bdac92f4b3fb54aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classThreadbase_adeebbe8bd7bcb5966244faf4e52e250a}\label{classThreadbase_adeebbe8bd7bcb5966244faf4e52e250a}} 
+\index{Threadbase@{Threadbase}!run@{run}}
+\index{run@{run}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool Threadbase\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+spwan a thread 
+
+\begin{DoxyReturn}{Returns}
+bool if success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classThreadbase_adeebbe8bd7bcb5966244faf4e52e250a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classThreadbase_adeebbe8bd7bcb5966244faf4e52e250a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classThreadbase_ae7fa2a80df809954316a5f14e5a1eba5}\label{classThreadbase_ae7fa2a80df809954316a5f14e5a1eba5}} 
+\index{Threadbase@{Threadbase}!stop@{stop}}
+\index{stop@{stop}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Threadbase\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classThreadbase_a01ecf625b3908e1358df4387158e2c68}\label{classThreadbase_a01ecf625b3908e1358df4387158e2c68}} 
+\index{Threadbase@{Threadbase}!threadFunc@{threadFunc}}
+\index{threadFunc@{threadFunc}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{threadFunc()}{threadFunc()}}
+{\footnotesize\ttfamily virtual void Threadbase\+::thread\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+virtual function which derived class has to define to run a thread 
+
+
+
+Implemented in \mbox{\hyperlink{classimggrab_1_1Camera_a4a8491d3df452a135e1b7517c80b233e}{imggrab\+::\+Camera}}, \mbox{\hyperlink{classimggrab_1_1QrFinder_a5e25bacba0b02c57cf5c009f673c0ad3}{imggrab\+::\+Qr\+Finder}}, and \mbox{\hyperlink{classimggrab_1_1ImageHandler_a5b39c4c7669e323ce5dfd8ad533acde7}{imggrab\+::\+Image\+Handler}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThreadbase_a01ecf625b3908e1358df4387158e2c68_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classThreadbase_a0df26f4a576175bf2759babe23e88690}\label{classThreadbase_a0df26f4a576175bf2759babe23e88690}} 
+\index{Threadbase@{Threadbase}!mRun@{mRun}}
+\index{mRun@{mRun}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{mRun}{mRun}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Threadbase\+::m\+Run\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+execute value 
+
+\mbox{\Hypertarget{classThreadbase_ac9632274a2a705546a1b0e05add442a6}\label{classThreadbase_ac9632274a2a705546a1b0e05add442a6}} 
+\index{Threadbase@{Threadbase}!mThread@{mThread}}
+\index{mThread@{mThread}!Threadbase@{Threadbase}}
+\doxysubsubsection{\texorpdfstring{mThread}{mThread}}
+{\footnotesize\ttfamily std\+::thread Threadbase\+::m\+Thread\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+store thread object 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Threadbase_8hpp}{Threadbase.\+hpp}}\end{DoxyCompactItemize}

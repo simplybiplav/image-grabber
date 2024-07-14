@@ -1,0 +1,4 @@
+<map id="imggrab::Camera::threadFunc" name="imggrab::Camera::threadFunc">
+<area shape="rect" id="node1" title="function to capture frame and put into queue" alt="" coords="5,13,220,39"/>
+<area shape="rect" id="node2" href="$classimggrab_1_1ImageQueue.html#ac1c656cc49d61e96faa728119b412f25" title="push entry to the queue" alt="" coords="268,5,435,47"/>
+</map>

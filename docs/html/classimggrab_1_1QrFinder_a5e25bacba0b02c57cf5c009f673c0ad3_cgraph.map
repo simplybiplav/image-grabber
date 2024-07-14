@@ -1,0 +1,7 @@
+<map id="imggrab::QrFinder::threadFunc" name="imggrab::QrFinder::threadFunc">
+<area shape="rect" id="node1" title="processed incoming queue and finds image frame which has any qr value" alt="" coords="5,90,152,131"/>
+<area shape="rect" id="node2" href="$classimggrab_1_1ImageQueue.html#a77b4a66281b04598b98df9567a7d546e" title="push entry to the queue" alt="" coords="200,5,399,32"/>
+<area shape="rect" id="node3" href="$classimggrab_1_1ImageQueue.html#ac1c656cc49d61e96faa728119b412f25" title="push entry to the queue" alt="" coords="216,57,383,98"/>
+<area shape="rect" id="node4" href="$classimggrab_1_1ImageQueue.html#a8ae6c1e508f3847dd7be3fbe4a6b0d69" title="returns size of Queue" alt="" coords="216,122,383,163"/>
+<area shape="rect" id="node5" href="$classimggrab_1_1ImageQueue.html#af40e8481107dec59ca024c2d6169504d" title="blocking wait for queue" alt="" coords="216,187,383,229"/>
+</map>

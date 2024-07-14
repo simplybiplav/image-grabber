@@ -5,40 +5,48 @@
 #include <mutex>
 #include <condition_variable>
 
-namespace imggrab{ 
+namespace imggrab{
 
-typedef std::pair <std::chrono::nanoseconds, cv::Mat> TimeMatPair; //<! 
+    typedef std::pair <std::chrono::nanoseconds, cv::Mat> TimeMatPair; //<!
 
-class ImageQueue {
-    private:
-        std::queue<TimeMatPair> mTsMatQ; //<! timestamp mat queue 
-        std::mutex mQMutex; //<! mutex for Q 
-        std::condition_variable mCondVar; //<! variable to wait
-        int mQMaxSize; //<! max size of the Queue 
+    /*! \class ImageQueue ImageQueue.hpp
+     *   \brief for parsing argument
+     *
+     */
+    class ImageQueue {
+        private:
+            std::queue<TimeMatPair> mTsMatQ; //<! timestamp mat queue
+            std::mutex mQMutex; //<! mutex for Q
+            std::condition_variable mCondVar; //<! variable to wait
+            int mQMaxSize; //<! max size of the Queue
 
-    public:
-        /*!
-            \param[in] qSize size for Q 
-        */
-        
-        ImageQueue(int qSize);
+        public:
 
-        /*!
-            \param[in] entry pair to push into queue
-        */
-        bool push(TimeMatPair& entry);
+            ImageQueue(int qSize);
 
-        /*!
-            \param[inout] entry get pair
-        */
-        TimeMatPair pop();
+            /// @brief push entry to the queue
+            /// @param[in] entry TimeMatPair reference
+            /// @return bool True if success else false
+            bool push(TimeMatPair& entry);
 
-        /*!
-        */
-        bool timedWait(std::chrono::nanoseconds nanoSec);
-        void wait();
-        int size();
-};
+            /// @brief push entry to the queue
+            /// @param[in] entry TimeMatPair reference
+            /// @return TImeMatPair value if success else throws exception
+            TimeMatPair pop();
+
+            /// @brief timed wait for queue
+            /// @param[in] nanoSec wait time in nanoseconds
+            /// @return bool True if an entry is pushed to queue
+            bool timedWait(std::chrono::nanoseconds nanoSec);
+
+            /// @brief blocking wait for queue
+            /// @return void
+            void wait();
+
+            /// @brief returns size of Queue
+            /// @return int size of Queuee
+            int size();
+    };
 
 
 }

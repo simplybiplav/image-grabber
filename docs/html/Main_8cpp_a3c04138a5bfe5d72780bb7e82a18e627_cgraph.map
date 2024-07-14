@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,69,60,96"/>
+<area shape="rect" id="node2" href="$classThreadbase.html#a89c3036d9c15de30bdac92f4b3fb54aa" title=" " alt="" coords="128,19,259,45"/>
+<area shape="rect" id="node3" href="$structimggrab_1_1Config.html#ae2dbd375bb3eeab8216d8bf57520efb9" title="arguments passed" alt="" coords="108,69,279,96"/>
+<area shape="rect" id="node7" href="$classThreadbase.html#adeebbe8bd7bcb5966244faf4e52e250a" title="spwan a thread" alt="" coords="130,132,257,159"/>
+<area shape="rect" id="node4" href="$structimggrab_1_1Config.html#aba8ea28172548653089123c7c54957d7" title="exit program" alt="" coords="337,5,495,32"/>
+<area shape="rect" id="node5" href="$structimggrab_1_1Config.html#a4a8d1d3155aa7e59e0fba48f68b1f9a2" title="prints help about argument" alt="" coords="335,56,497,83"/>
+<area shape="rect" id="node6" href="$structimggrab_1_1Config.html#a062262e9fc01e0f8d08ed768fc5cbac0" title="check if configuration is good" alt="" coords="333,107,499,133"/>
+<area shape="rect" id="node8" href="$classThreadbase.html#a01ecf625b3908e1358df4387158e2c68" title="virtual function which derived class has to define to run a thread" alt="" coords="327,157,505,184"/>
+</map>

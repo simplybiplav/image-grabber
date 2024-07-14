@@ -1,0 +1,145 @@
+\hypertarget{classimggrab_1_1QrFinder}{}\doxysection{imggrab\+::Qr\+Finder Class Reference}
+\label{classimggrab_1_1QrFinder}\index{imggrab::QrFinder@{imggrab::QrFinder}}
+
+
+finds QR values in image frames and outs those frame  
+
+
+
+
+{\ttfamily \#include $<$Qr\+Finder.\+hpp$>$}
+
+
+
+Inheritance diagram for imggrab\+::Qr\+Finder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classimggrab_1_1QrFinder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for imggrab\+::Qr\+Finder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classimggrab_1_1QrFinder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimggrab_1_1QrFinder_aa85e05cb9d97ac25cf5b616889f8f818}{Qr\+Finder}} (const std\+::set$<$ std\+::string $>$ \&qr\+Set, \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&in\+Queue, \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&out\+Queue)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classimggrab_1_1QrFinder_a5e25bacba0b02c57cf5c009f673c0ad3}{thread\+Func}} ()
+\begin{DoxyCompactList}\small\item\em processed incoming queue and finds image frame which has any qr value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classimggrab_1_1QrFinder_a7809a7d2aba9fa48806ed365a3a0f14f}{m\+Qr\+Set}}
+\begin{DoxyCompactList}\small\item\em set to store qr strings \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \& \mbox{\hyperlink{classimggrab_1_1QrFinder_aa1c27a64adf7983b604f1a0203f50fd5}{inQ}}
+\begin{DoxyCompactList}\small\item\em incoming queue \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \& \mbox{\hyperlink{classimggrab_1_1QrFinder_a4f59ce9627b5336d467e622b8f646340}{outQ}}
+\begin{DoxyCompactList}\small\item\em outgoing queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+finds QR values in image frames and outs those frame 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimggrab_1_1QrFinder_aa85e05cb9d97ac25cf5b616889f8f818}\label{classimggrab_1_1QrFinder_aa85e05cb9d97ac25cf5b616889f8f818}} 
+\index{imggrab::QrFinder@{imggrab::QrFinder}!QrFinder@{QrFinder}}
+\index{QrFinder@{QrFinder}!imggrab::QrFinder@{imggrab::QrFinder}}
+\doxysubsubsection{\texorpdfstring{QrFinder()}{QrFinder()}}
+{\footnotesize\ttfamily imggrab\+::\+Qr\+Finder\+::\+Qr\+Finder (\begin{DoxyParamCaption}\item[{const std\+::set$<$ std\+::string $>$ \&}]{qr\+Set,  }\item[{\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&}]{in\+Queue,  }\item[{\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&}]{out\+Queue }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em qr\+Set} & set of QR to be found \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Queue} & queue to be processed \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em out\+Queue} & queue of frame which has any of the qr value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimggrab_1_1QrFinder_a5e25bacba0b02c57cf5c009f673c0ad3}\label{classimggrab_1_1QrFinder_a5e25bacba0b02c57cf5c009f673c0ad3}} 
+\index{imggrab::QrFinder@{imggrab::QrFinder}!threadFunc@{threadFunc}}
+\index{threadFunc@{threadFunc}!imggrab::QrFinder@{imggrab::QrFinder}}
+\doxysubsubsection{\texorpdfstring{threadFunc()}{threadFunc()}}
+{\footnotesize\ttfamily void imggrab\+::\+Qr\+Finder\+::thread\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+processed incoming queue and finds image frame which has any qr value 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classThreadbase_a01ecf625b3908e1358df4387158e2c68}{Threadbase}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1QrFinder_a5e25bacba0b02c57cf5c009f673c0ad3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classimggrab_1_1QrFinder_aa1c27a64adf7983b604f1a0203f50fd5}\label{classimggrab_1_1QrFinder_aa1c27a64adf7983b604f1a0203f50fd5}} 
+\index{imggrab::QrFinder@{imggrab::QrFinder}!inQ@{inQ}}
+\index{inQ@{inQ}!imggrab::QrFinder@{imggrab::QrFinder}}
+\doxysubsubsection{\texorpdfstring{inQ}{inQ}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}}\& imggrab\+::\+Qr\+Finder\+::inQ\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+incoming queue 
+
+\mbox{\Hypertarget{classimggrab_1_1QrFinder_a7809a7d2aba9fa48806ed365a3a0f14f}\label{classimggrab_1_1QrFinder_a7809a7d2aba9fa48806ed365a3a0f14f}} 
+\index{imggrab::QrFinder@{imggrab::QrFinder}!mQrSet@{mQrSet}}
+\index{mQrSet@{mQrSet}!imggrab::QrFinder@{imggrab::QrFinder}}
+\doxysubsubsection{\texorpdfstring{mQrSet}{mQrSet}}
+{\footnotesize\ttfamily std\+::set$<$std\+::string$>$ imggrab\+::\+Qr\+Finder\+::m\+Qr\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set to store qr strings 
+
+\mbox{\Hypertarget{classimggrab_1_1QrFinder_a4f59ce9627b5336d467e622b8f646340}\label{classimggrab_1_1QrFinder_a4f59ce9627b5336d467e622b8f646340}} 
+\index{imggrab::QrFinder@{imggrab::QrFinder}!outQ@{outQ}}
+\index{outQ@{outQ}!imggrab::QrFinder@{imggrab::QrFinder}}
+\doxysubsubsection{\texorpdfstring{outQ}{outQ}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}}\& imggrab\+::\+Qr\+Finder\+::outQ\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+outgoing queue 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{QrFinder_8hpp}{Qr\+Finder.\+hpp}}\item 
+src/\mbox{\hyperlink{QrFinder_8cpp}{Qr\+Finder.\+cpp}}\end{DoxyCompactItemize}

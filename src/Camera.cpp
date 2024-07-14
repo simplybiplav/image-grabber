@@ -5,11 +5,13 @@ namespace imggrab {
 
     void Camera::threadFunc() {
         cv::VideoCapture cam(mCamId);
-        cam.set( cv::CAP_PROP_FPS, mFps);
-        cam.set( cv::CAP_PROP_FRAME_WIDTH, mFrameWidth);
-        cam.set( cv::CAP_PROP_FRAME_HEIGHT, mFrameHeight);
-        cam.set( cv::CAP_PROP_BRIGHTNESS, mBrightness);
-
+        if(mFps != 0 ){
+            cam.set( cv::CAP_PROP_FPS, mFps);
+        }
+        if(mFrameWidth != 0 && mFrameHeight !=0){
+            cam.set( cv::CAP_PROP_FRAME_WIDTH, mFrameWidth);
+            cam.set( cv::CAP_PROP_FRAME_HEIGHT, mFrameHeight);
+        }
         while(mRun) {
 
             try {
@@ -26,14 +28,7 @@ namespace imggrab {
         }
     }
 
-    Camera::Camera(int camId,ImageQueue& imageQ):mFps(30),mFrameWidth(480),mFrameHeight(360),mBrightness(1),mCamId(camId),mImageQ(imageQ){
-    }
-
-    void Camera::setParams(int fps, int width, int height, int brightness) {
-        mFps = fps;
-        mFrameWidth = width;
-        mFrameHeight = height;
-        mBrightness = brightness;
+    Camera::Camera(int camId,int fps, int width, int height,ImageQueue& imageQ):mFps(fps),mFrameWidth(width),mFrameHeight(height),mCamId(camId),mImageQ(imageQ){
     }
 
 

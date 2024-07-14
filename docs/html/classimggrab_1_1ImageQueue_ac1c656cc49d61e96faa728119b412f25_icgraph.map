@@ -1,0 +1,5 @@
+<map id="imggrab::ImageQueue::push" name="imggrab::ImageQueue::push">
+<area shape="rect" id="node1" title="push entry to the queue" alt="" coords="268,35,435,76"/>
+<area shape="rect" id="node2" href="$classimggrab_1_1QrFinder.html#a5e25bacba0b02c57cf5c009f673c0ad3" title="processed incoming queue and finds image frame which has any qr value" alt="" coords="39,5,186,47"/>
+<area shape="rect" id="node3" href="$classimggrab_1_1Camera.html#a4a8491d3df452a135e1b7517c80b233e" title="function to capture frame and put into queue" alt="" coords="5,71,220,98"/>
+</map>

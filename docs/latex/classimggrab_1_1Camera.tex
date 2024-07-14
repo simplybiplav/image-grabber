@@ -1,0 +1,172 @@
+\hypertarget{classimggrab_1_1Camera}{}\doxysection{imggrab\+::Camera Class Reference}
+\label{classimggrab_1_1Camera}\index{imggrab::Camera@{imggrab::Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+
+
+Inheritance diagram for imggrab\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classimggrab_1_1Camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for imggrab\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classimggrab_1_1Camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimggrab_1_1Camera_ae0eb061492d0cc67af1a1e7ab292d56d}{Camera}} (int cam\+Id, int fps, int width, int height, \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&imageQ)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classimggrab_1_1Camera_a4a8491d3df452a135e1b7517c80b233e}{thread\+Func}} ()
+\begin{DoxyCompactList}\small\item\em function to capture frame and put into queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classimggrab_1_1Camera_a06672a800875a7699badf3167939c75b}{m\+Fps}}
+\begin{DoxyCompactList}\small\item\em Fps Of camera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classimggrab_1_1Camera_a7408c179dbe3cce210e8f708ae138378}{m\+Frame\+Width}}
+\begin{DoxyCompactList}\small\item\em Image Frame Width. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classimggrab_1_1Camera_aa28b14dc18aea83bd65b57de90031791}{m\+Frame\+Height}}
+\begin{DoxyCompactList}\small\item\em Image Frame Height. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classimggrab_1_1Camera_a5c54c7b8661375f9b51907303c613a72}{m\+Cam\+Id}}
+\begin{DoxyCompactList}\small\item\em camera Source Id \end{DoxyCompactList}\item 
+std\+::thread \mbox{\hyperlink{classimggrab_1_1Camera_a5ff0c5e3f086999fe6d2cbaac3b4b384}{m\+Thread}}
+\begin{DoxyCompactList}\small\item\em thread object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \& \mbox{\hyperlink{classimggrab_1_1Camera_ad4533db0daddf1db2105fd054a0c18e5}{m\+ImageQ}}
+\begin{DoxyCompactList}\small\item\em queue to put frames \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimggrab_1_1Camera_ae0eb061492d0cc67af1a1e7ab292d56d}\label{classimggrab_1_1Camera_ae0eb061492d0cc67af1a1e7ab292d56d}} 
+\index{imggrab::Camera@{imggrab::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{cam\+Id,  }\item[{int}]{fps,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}} \&}]{imageQ }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cam\+Id} & camera index \\
+\hline
+\mbox{\texttt{ in}}  & {\em fps} & fps of camera \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & frame width \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & camera height \\
+\hline
+\mbox{\texttt{ in}}  & {\em imageQ} & image Queue constructor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimggrab_1_1Camera_a4a8491d3df452a135e1b7517c80b233e}\label{classimggrab_1_1Camera_a4a8491d3df452a135e1b7517c80b233e}} 
+\index{imggrab::Camera@{imggrab::Camera}!threadFunc@{threadFunc}}
+\index{threadFunc@{threadFunc}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{threadFunc()}{threadFunc()}}
+{\footnotesize\ttfamily void Camera\+::thread\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+function to capture frame and put into queue 
+
+
+
+Implements \mbox{\hyperlink{classThreadbase_a01ecf625b3908e1358df4387158e2c68}{Threadbase}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimggrab_1_1Camera_a4a8491d3df452a135e1b7517c80b233e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classimggrab_1_1Camera_a5c54c7b8661375f9b51907303c613a72}\label{classimggrab_1_1Camera_a5c54c7b8661375f9b51907303c613a72}} 
+\index{imggrab::Camera@{imggrab::Camera}!mCamId@{mCamId}}
+\index{mCamId@{mCamId}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mCamId}{mCamId}}
+{\footnotesize\ttfamily int imggrab\+::\+Camera\+::m\+Cam\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+camera Source Id 
+
+\mbox{\Hypertarget{classimggrab_1_1Camera_a06672a800875a7699badf3167939c75b}\label{classimggrab_1_1Camera_a06672a800875a7699badf3167939c75b}} 
+\index{imggrab::Camera@{imggrab::Camera}!mFps@{mFps}}
+\index{mFps@{mFps}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mFps}{mFps}}
+{\footnotesize\ttfamily int imggrab\+::\+Camera\+::m\+Fps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fps Of camera. 
+
+\mbox{\Hypertarget{classimggrab_1_1Camera_aa28b14dc18aea83bd65b57de90031791}\label{classimggrab_1_1Camera_aa28b14dc18aea83bd65b57de90031791}} 
+\index{imggrab::Camera@{imggrab::Camera}!mFrameHeight@{mFrameHeight}}
+\index{mFrameHeight@{mFrameHeight}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mFrameHeight}{mFrameHeight}}
+{\footnotesize\ttfamily int imggrab\+::\+Camera\+::m\+Frame\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Image Frame Height. 
+
+\mbox{\Hypertarget{classimggrab_1_1Camera_a7408c179dbe3cce210e8f708ae138378}\label{classimggrab_1_1Camera_a7408c179dbe3cce210e8f708ae138378}} 
+\index{imggrab::Camera@{imggrab::Camera}!mFrameWidth@{mFrameWidth}}
+\index{mFrameWidth@{mFrameWidth}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mFrameWidth}{mFrameWidth}}
+{\footnotesize\ttfamily int imggrab\+::\+Camera\+::m\+Frame\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Image Frame Width. 
+
+\mbox{\Hypertarget{classimggrab_1_1Camera_ad4533db0daddf1db2105fd054a0c18e5}\label{classimggrab_1_1Camera_ad4533db0daddf1db2105fd054a0c18e5}} 
+\index{imggrab::Camera@{imggrab::Camera}!mImageQ@{mImageQ}}
+\index{mImageQ@{mImageQ}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mImageQ}{mImageQ}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimggrab_1_1ImageQueue}{Image\+Queue}}\& imggrab\+::\+Camera\+::m\+ImageQ\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+queue to put frames 
+
+\mbox{\Hypertarget{classimggrab_1_1Camera_a5ff0c5e3f086999fe6d2cbaac3b4b384}\label{classimggrab_1_1Camera_a5ff0c5e3f086999fe6d2cbaac3b4b384}} 
+\index{imggrab::Camera@{imggrab::Camera}!mThread@{mThread}}
+\index{mThread@{mThread}!imggrab::Camera@{imggrab::Camera}}
+\doxysubsubsection{\texorpdfstring{mThread}{mThread}}
+{\footnotesize\ttfamily std\+::thread imggrab\+::\+Camera\+::m\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+thread object 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Camera_8hpp}{Camera.\+hpp}}\item 
+src/\mbox{\hyperlink{Camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}
