@@ -1,4 +1,4 @@
 <map id="imggrab::ImageHandler" name="imggrab::ImageHandler">
-<area shape="rect" id="node1" title="for parsing argument" alt="" coords="5,80,181,107"/>
+<area shape="rect" id="node1" title="saves the images from queue to file in specified directory" alt="" coords="5,80,181,107"/>
 <area shape="rect" id="node2" href="$classThreadbase.html" title="abstract class for running a thread" alt="" coords="44,5,143,32"/>
 </map>

@@ -10,7 +10,7 @@ namespace imggrab{
     typedef std::pair <std::chrono::nanoseconds, cv::Mat> TimeMatPair; //<!
 
     /*! \class ImageQueue ImageQueue.hpp
-     *   \brief for parsing argument
+     *   \brief Queue to maintain pair of timestamp and cv::Mat 
      *
      */
     class ImageQueue {

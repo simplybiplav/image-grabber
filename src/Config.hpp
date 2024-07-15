@@ -6,7 +6,7 @@ namespace imggrab {
 
 
     /*! \class Config Config.hpp
-     *   \brief for parsing argument
+     *   \brief parses argument , validates and prints help
      *
      */
     struct Config {

@@ -2,7 +2,7 @@
 \label{classimggrab_1_1ImageQueue}\index{imggrab::ImageQueue@{imggrab::ImageQueue}}
 
 
-for parsing argument  
+Queue to maintain pair of timestamp and cv\+::\+Mat.  
 
 
 
@@ -29,18 +29,16 @@ int \mbox{\hyperlink{classimggrab_1_1ImageQueue_a8ae6c1e508f3847dd7be3fbe4a6b0d6
 \item 
 std\+::queue$<$ \mbox{\hyperlink{namespaceimggrab_acd15a8c9fa76c1bdf7cf7c45eda96fb8}{Time\+Mat\+Pair}} $>$ \mbox{\hyperlink{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}{m\+Ts\+MatQ}}
 \item 
-std\+::mutex \mbox{\hyperlink{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}{m\+Q\+Mutex}}
+std\+::mutex \mbox{\hyperlink{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}{m\+QMutex}}
 \item 
 std\+::condition\+\_\+variable \mbox{\hyperlink{classimggrab_1_1ImageQueue_a19a5642d27a6335307bf9c682bead524}{m\+Cond\+Var}}
 \item 
-int \mbox{\hyperlink{classimggrab_1_1ImageQueue_a018e67afe8865980fe4c363797562d93}{m\+Q\+Max\+Size}}
+int \mbox{\hyperlink{classimggrab_1_1ImageQueue_a018e67afe8865980fe4c363797562d93}{m\+QMax\+Size}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-for parsing argument 
-
-
+Queue to maintain pair of timestamp and cv\+::\+Mat. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classimggrab_1_1ImageQueue_aae36acbbdbb191f3317d7b7b0fd7b112}\label{classimggrab_1_1ImageQueue_aae36acbbdbb191f3317d7b7b0fd7b112}} 
@@ -68,10 +66,9 @@ push entry to the queue
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-T\+Ime\+Mat\+Pair value if success else throws exception 
+TIme\+Mat\+Pair value if success else throws exception 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -117,8 +114,7 @@ returns size of Queue
 \begin{DoxyReturn}{Returns}
 int size of Queuee 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -156,8 +152,7 @@ blocking wait for queue
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -177,13 +172,13 @@ Here is the caller graph for this function\+:
 \index{imggrab::ImageQueue@{imggrab::ImageQueue}!mQMaxSize@{mQMaxSize}}
 \index{mQMaxSize@{mQMaxSize}!imggrab::ImageQueue@{imggrab::ImageQueue}}
 \doxysubsubsection{\texorpdfstring{mQMaxSize}{mQMaxSize}}
-{\footnotesize\ttfamily int imggrab\+::\+Image\+Queue\+::m\+Q\+Max\+Size\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int imggrab\+::\+Image\+Queue\+::m\+QMax\+Size\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}\label{classimggrab_1_1ImageQueue_a85c4b0587024b9e0bcfa0d19ff85f3ff}} 
 \index{imggrab::ImageQueue@{imggrab::ImageQueue}!mQMutex@{mQMutex}}
 \index{mQMutex@{mQMutex}!imggrab::ImageQueue@{imggrab::ImageQueue}}
 \doxysubsubsection{\texorpdfstring{mQMutex}{mQMutex}}
-{\footnotesize\ttfamily std\+::mutex imggrab\+::\+Image\+Queue\+::m\+Q\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::mutex imggrab\+::\+Image\+Queue\+::m\+QMutex\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}\label{classimggrab_1_1ImageQueue_a1b56880303abdde06da5dcf4d964dd9e}} 
 \index{imggrab::ImageQueue@{imggrab::ImageQueue}!mTsMatQ@{mTsMatQ}}

@@ -1,6 +1,6 @@
 <map id="Threadbase" name="Threadbase">
 <area shape="rect" id="node1" title="abstract class for running a thread" alt="" coords="203,5,302,32"/>
 <area shape="rect" id="node2" href="$classimggrab_1_1Camera.html" title=" " alt="" coords="5,80,140,107"/>
-<area shape="rect" id="node3" href="$classimggrab_1_1ImageHandler.html" title="for parsing argument" alt="" coords="165,80,341,107"/>
-<area shape="rect" id="node4" href="$classimggrab_1_1QrFinder.html" title="finds QR values in image frames and outs those frame" alt="" coords="365,80,503,107"/>
+<area shape="rect" id="node3" href="$classimggrab_1_1ImageHandler.html" title="saves the images from queue to file in specified directory" alt="" coords="165,80,341,107"/>
+<area shape="rect" id="node4" href="$classimggrab_1_1QrFinder.html" title="finds specified QR values in incoming queue and put into out queue" alt="" coords="365,80,503,107"/>
 </map>

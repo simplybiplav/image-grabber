@@ -7,7 +7,7 @@ namespace imggrab {
 
 
     /*! \class QrFinder QrFinder.hpp
-     *   \brief finds QR values in image frames and outs those frame
+     *   \brief finds specified QR values in incoming queue and put into out queue 
      *
      */
     class QrFinder: public Threadbase {

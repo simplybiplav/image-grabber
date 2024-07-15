@@ -1,4 +1,4 @@
 <map id="imggrab::QrFinder" name="imggrab::QrFinder">
-<area shape="rect" id="node1" title="finds QR values in image frames and outs those frame" alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node1" title="finds specified QR values in incoming queue and put into out queue" alt="" coords="5,80,144,107"/>
 <area shape="rect" id="node2" href="$classThreadbase.html" title="abstract class for running a thread" alt="" coords="25,5,124,32"/>
 </map>

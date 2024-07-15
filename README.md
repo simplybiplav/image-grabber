@@ -4,8 +4,13 @@ It grabs the images which have specific qr values and saves to specific folder i
 
 
 usage:
-
+```
 build/image-grabber --help
+```
+
+```
+./build/image_grabber --cam 0 --fps 10 --width 1280 --height 720 --dir "images" --qr "yes" --qr "qr2" --qr "st3"
+```
 
 ## compilation
 

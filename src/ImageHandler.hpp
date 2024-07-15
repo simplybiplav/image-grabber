@@ -7,7 +7,7 @@ namespace imggrab {
 
 
     /*! \class ImageHandler ImageHandler.hpp
-     *   \brief for parsing argument
+     *   \brief saves the images from queue to file in specified directory 
      *
      */
     class ImageHandler: public Threadbase {
