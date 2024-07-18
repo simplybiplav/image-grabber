@@ -2,8 +2,25 @@
 
 It grabs the images which have specific qr values and saves to specific folder in jpg format
 
+## Thread spawn
 
-usage:
+```mermaid
+graph TD;
+    main-->cam;
+    main-->qrFinder;
+    main-->imgHander;
+```
+
+## Flow of message between thread
+
+```mermaid
+graph LR;
+    cam-->| ns,Mat |qrFinder;
+    qrFinder-->| ns,Mat|imgHander;
+    imgHander --> | .jpg | folder
+```
+## Usage
+
 ```
 build/image-grabber --help
 ```
